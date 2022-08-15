@@ -41,7 +41,7 @@ const handleApiCall = (req, res) => {
     requestOptions
   )
     .then((data) => data.text())
-    .then((result) => res.send(result))
+    .then((result) => res.json(result))
     .catch(() => res.status(400).json("unable to work with API"));
 };
 
