@@ -1,6 +1,6 @@
 const Clarifai = require("clarifai");
 
-const app = new Clarifai.App({ apiKey: "af1987f93015415285ce2f7e1f5af4c7" });
+const app = new Clarifai.App({ apiKey: process.env.API_PAT });
 
 const handleProfileGet = (req, res, db) => {
   const { id } = req.params;
