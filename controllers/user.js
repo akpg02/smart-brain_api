@@ -40,7 +40,7 @@ const handleApiCall = (req, res) => {
       "/outputs",
     requestOptions
   )
-    .then((data) => data.text())
+    .then((data) => data.json())
     .then((result) => res.json(result))
     .catch(() => res.status(400).json("unable to work with API"));
 };
